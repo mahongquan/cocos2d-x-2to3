@@ -4,14 +4,23 @@ import re
 import sys
 import codecs
 #############################
-dic={}
+dic1_2={}
 jiacc=["spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
-dic["CCMutableArray"]="CCArray"
-dic["CGFloat"]="float"
-dic["ccTime"]="float"
+dic1_2["CCMutableArray"]="CCArray"
+dic1_2["CGFloat"]="float"
+dic1_2["ccTime"]="float"
 for one in jiacc:
-    dic[one]="create"
-##############################
+    dic1_2[one]="create"
+########################
+removecc=["CCSprite","CCNode"]
+dic2_3={}
+dic2_3["objectAtIndex"]="getObjectAtIndex"
+dic2_3["ccTime"]="float"
+for one in removecc:
+    dic2_3[one]=one[2:]
+###########################
+dic=dic2_3
+###########################
 pattern = re.compile(r"""   (//[^\r\n]*) # match a single line comment
                             | (/\*.*?\*/)      # match a multi line comment
                             | ("[^"]*")        # match a string literal
