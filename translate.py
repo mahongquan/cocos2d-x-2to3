@@ -5,22 +5,25 @@ import sys
 import codecs
 #############################
 dic1_2={}
-jiacc=["spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
+tocreate=["spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
 dic1_2["CCMutableArray"]="CCArray"
 dic1_2["CGFloat"]="float"
 dic1_2["ccTime"]="float"
-for one in jiacc:
+for one in tocreate:
     dic1_2[one]="create"
 ########################
-removecc=["CCSprite","CCNode","CCDirector","CCPoint","CCSize","CCLayer"
-,"CCRect","CCEvent"]
+addcc=["Sprite","SpriteFrame","Node","Director","Point","Size","Layer"
+,"Rect","Event","Touch","SpriteBatchNode","FadeOut","FadeIn","TintBy"
+,"Sequence","RepeatForever","ShaderCache","OrbitCamera","ShaderCache"
+,"RotateBy","MoveTo","MoveBy","ScaleBy","ScaleTo","ActionInterval"
+,"Blink","SpriteFrameCache","Animation","AnimationCache","Animate"]
 dic2_3={}
 dic2_3["objectAtIndex"]="getObjectAtIndex"
 dic2_3["sharedDirector"]="getInstance"
 dic2_3["CCArray"]="__Array"
 dic2_3["CCString"]="__String"
-for one in removecc:
-    dic2_3[one]=one[2:]
+for one in addcc:
+    dic2_3["CC"+one]=one
 ###########################
 dic=dic2_3
 ###########################
