@@ -13,7 +13,7 @@ for one in tocreate:
     dic1_2[one]="create"
 ########################
 addcc=["Sprite","SpriteFrame","Node","Director","Point","Size","Layer"
-,"LayerColor","",
+,"LayerColor"
 ,"Rect","Event","Touch","SpriteBatchNode","FadeOut","FadeIn","TintBy"
 ,"Sequence","RepeatForever","ShaderCache","OrbitCamera","ShaderCache"
 ,"SkewBy","SkewTo","JumpBy","JumpTo","BezierTo","BezierBy","Place"
