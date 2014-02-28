@@ -103,6 +103,10 @@ def translateDir(path):#
         fn=path+"/"+f
         treatfile(fn)
 if __name__=="__main__":
+  if len(sys.argv)>1:
     translateDir(sys.argv[1])
+  else:
+    print "This program should be use like this:\n\n\t\tpython translate.py srcdir"
+
 
 
