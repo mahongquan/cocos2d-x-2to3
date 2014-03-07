@@ -5,10 +5,17 @@ import sys
 import codecs
 #############################
 dic1_2={}
-tocreate=["spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
+tocreate=["menuWithItems","itemFromString","spriteWithFile","actionWithDuration","menuWithItem","itemWithLabel","transitionWithDuration","spriteWithFile","labelWithString","node"]#,"Object","Sprite","Point","Scene","Node","MoveTo","Director","Application","Size","Touch","Event"]
 dic1_2["CCMutableArray"]="CCArray"
 dic1_2["CGFloat"]="float"
 dic1_2["ccTime"]="float"
+dic1_2["LAYER_NODE_FUNC"]="CREATE_FUNC"
+dic1_2["CCTextAlignmentCenter"]="kCCTextAlignmentCenter"
+dic1_2["setDisplayFPS"]="setDisplayStats"
+dic1_2["setIsTouchEnabled"]="setTouchEnabled"
+dic1_2["getObjectAtIndex"]="objectAtIndex"
+dic1_2["locationInView"]="getLocationInView"
+dic1_2["setIsVisible"]="setVisible"
 for one in tocreate:
     dic1_2[one]="create"
 ########################
@@ -37,7 +44,7 @@ dic2_3["CCString"]="__String"
 for one in addcc:
     dic2_3["CC"+one]=one
 ###########################
-dic=dic2_3
+dic=dic1_2
 ###########################
 pattern = re.compile(r"""   (//[^\r\n]*) # match a single line comment
                             | (/\*.*?\*/)      # match a multi line comment
